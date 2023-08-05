@@ -16,12 +16,12 @@ class Solution{
        }
        string k=S;
        v.push_back(S);
-      next_permutation(k.begin(),k.end());
+      
        long long i=2;
        while(i<=p){
-            v.push_back(k);
+           
            next_permutation(k.begin(),k.end());
-          
+           v.push_back(k);
            i++;
        }
        sort(v.begin(),v.end());
