@@ -119,14 +119,14 @@ public:
          if(root==NULL){
              return;
          }
-         cnt++;
+         
          if(root->left==NULL && root->right==NULL){
              v.push_back(cnt);
          }
         
          
-         solve(root->left,cnt,v);
-         solve(root->right,cnt,v);
+         solve(root->left,cnt+1,v);
+         solve(root->right,cnt+1,v);
           
          
      }
@@ -136,7 +136,7 @@ public:
     int getCount(Node *root, int k)
     {  
       vector<int>v;
-       solve(root,0,v);
+       solve(root,1,v);
      
          sort(v.begin(),v.end());
         
