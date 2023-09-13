@@ -11,12 +11,12 @@ class Solution
     string reverseWords(string S) 
   { 
         
-        
-        string s=S;
+        string s=".";
+        s+=S;
         
         
         reverse(s.begin(),s.end()); 
-        s+='.';
+        
         int j=0;
         for(int i=0;i<s.length();i++){
             if(s[i]=='.'){
