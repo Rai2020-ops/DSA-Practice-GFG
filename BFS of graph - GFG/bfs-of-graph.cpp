@@ -13,20 +13,20 @@ class Solution {
         q.push(0);
         vector<int>bfs;
         while(!q.empty()){
-            int node=q.front();
+            int a=q.front();
+           
             q.pop();
-            bfs.push_back(node);
-            for(auto it:adj[node]){
-                if(!vis[it]){
-                    vis[it]=1;
-                    q.push(it);
+            bfs.push_back(a);
+            for(auto i:adj[a]){
+                if(!vis[i]){
+                    vis[i]=1;
+                    q.push(i);
                 }
             }
             
         }
         return bfs;
     }
-
 };
 
 //{ Driver Code Starts.
